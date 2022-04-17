@@ -1,10 +1,10 @@
 from django.contrib.auth import get_user_model
 from rest_framework import viewsets
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+
 
 from api.models import Post
 from api.paginations import PagePagination
-from api.permissions import IsAuthor
+from api.permissions import IsAdminOrIsAuthorOrReadOnly
 from api.serializers import PostSerializer
 
 User = get_user_model()
@@ -13,7 +13,7 @@ User = get_user_model()
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly, IsAuthor]
+    permission_classes = [IsAdminOrIsAuthorOrReadOnly]
     pagination_class = PagePagination
 
     def get_queryset(self, current_user=None):
