@@ -1,4 +1,4 @@
-#Тестовое задание для Junior Backend Developer (Django)
+# Тестовое задание для Junior Backend Developer (Django)
 
 [![Python](https://img.shields.io/badge/-Python-464646?style=flat-square&logo=Python)](https://www.python.org/)
 [![Django](https://img.shields.io/badge/-Django-464646?style=flat-square&logo=Django)](https://www.djangoproject.com/)
@@ -18,7 +18,7 @@
 
 ## Примеры запросов
 
-####Регистрация пользователя
+#### Регистрация пользователя
 Запрос (POST /api/users/)
  ```
 {
@@ -40,7 +40,7 @@
 }
  ```
 
-####Получить токен авторизации
+#### Получить токен авторизации
 Запрос(POST /api/auth/token/login/)
  ```
 {
@@ -55,7 +55,7 @@
 }
  ``
 
-####Cписок постов
+#### Cписок постов
 Запрос(GET /api/posts)
 
 Ответ
