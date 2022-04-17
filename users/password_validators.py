@@ -16,16 +16,8 @@ class CaptialValidator:
         if len(capitals) < self.number_of_capitals:
             raise ValidationError(
                 _(
-                    "This password must contain at least %(min_length)d capital letters."
+                    "Пароль должен содержать хотя бы  %(min_length)d заглавную букву."
                 ),
                 code='password_too_short',
                 params={'min_length': self.number_of_capitals},
             )
-
-    def get_help_text(self):
-        return _(
-            "Your password must contain at least %(number_of_capitals)d capital letters."
-            % {
-                'number_of_capitals': self.number_of_capitals,
-            }
-        )
