@@ -9,4 +9,3 @@ class CustomUserViewSet(UserViewSet):
     serializer_class = CustomUserSerializer
     queryset = User.objects.all()
     pagination_class = PagePagination
-

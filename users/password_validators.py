@@ -4,9 +4,8 @@ from django.utils.translation import gettext as _
 
 class CaptialValidator:
     def __init__(
-            self,
-            number_of_capitals=1,
-
+        self,
+        number_of_capitals=1,
     ):
         self.number_of_capitals = number_of_capitals
 

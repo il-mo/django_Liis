@@ -1,7 +1,6 @@
 from django.contrib.auth import get_user_model
 from rest_framework import viewsets
 
-
 from api.models import Post
 from api.paginations import PagePagination
 from api.permissions import IsAdminOrIsAuthorOrReadOnly
